@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AllReports</title>
+    <style>table th, table td {padding: 5px;}</style>
+    <h1>Все протоколы</h1>
+    <table border="1">
+        <tr>
+            <th>NAME</th>
+            <th>PRICE</th>
+            <th>NAME</th>
+        </tr>
+        <tr th:each="reports : ${reports}">
+            <td th:text="${reports.getReportNumber}">Onions</td>
+            <td th:text="${reports.getReportDate}">2.41</td>
+            <td th:text="${reports.getReportName}">yes</td>
+        </tr>
+    </table>
+</head>
+<body>
+
+</body>
+</html>

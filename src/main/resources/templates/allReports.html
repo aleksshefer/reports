@@ -7,9 +7,9 @@
     <h1>Все протоколы</h1>
     <table border="1">
         <tr>
-            <th>NAME</th>
-            <th>PRICE</th>
-            <th>NAME</th>
+            <th>Номер</th>
+            <th>Дата</th>
+            <th>Название</th>
         </tr>
         <tr th:each="reports : ${reports}">
             <td th:text="${reports.getReportNumber}">Onions</td>

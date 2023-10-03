@@ -5,5 +5,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan("ru.shefer")
-public class ApplicationConfig {
+public class ApplicationConfig  {
+
 }

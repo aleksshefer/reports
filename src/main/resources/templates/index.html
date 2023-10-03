@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Протоколы об испытаниях</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <table class="table table-dark table-striped">
+        <thead>
+        <tr>
+            <th scope="col">№</th>
+            <th scope="col">Номер протокола</th>
+            <th scope="col">Дата испытаний</th>
+            <th scope="col">Название протокола</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>50</td>
+            <td>03.10.2023</td>
+            <td>Протокол испытаний Т1</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>51</td>
+            <td>04.10.2023</td>
+            <td>Протокол испытаний В-220 Т1</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>52</td>
+            <td>05.10.2023</td>
+            <td>Протокол испытаний ТТ-220 Т1</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container">
+
+    <form class="row g-3">
+
+        <div class="mb-3">
+            <label for="reportNumber" class="visually-hidden">Номер протокола</label>
+            <input class="form-control" id="reportNumber" placeholder="Номер протокола">
+        </div>
+
+        <div class="mb-3">
+            <label for="reportDate" class="visually-hidden">Дата протокола</label>
+            <input class="form-control" id="reportDate" placeholder="Дата протокола">
+        </div>
+
+        <div class="mb-3">
+            <label for="reportName" class="visually-hidden">Название протокола</label>
+            <input class="form-control" id="reportName" placeholder="Название протокола">
+        </div>
+
+        <div class="mb-3">
+            <label for="formFileLg" class="form-label">Загрузка протокола проверки</label>
+            <input class="form-control form-control-lg" id="formFileLg" type="file">
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary mb-3">Сохранить протокол</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

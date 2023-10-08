@@ -9,21 +9,21 @@
 <body>
 <div class="container">
 
-    <form class="row g-3" method="post" th:action="@{'/edit?reportId=' + ${reportId}}">
+    <form class="row g-3" method="post" th:action="@{'/edit?reportId=' + ${report.getReportId}}">
 
         <div class="mb-3">
             <label class="visually-hidden">Номер протокола</label>
-            <input class="form-control" name="reportNumber" th:placeholder="${reportNumber}">
+            <input class="form-control" name="reportNumber" placeholder="Номер протокола" th:value="${report.getReportNumber}">
         </div>
 
         <div class="mb-3">
             <label class="visually-hidden">Дата протокола</label>
-            <input class="form-control" name="reportDate" th:placeholder="${#dates.format(reportDate, 'dd.MM.yyyy')}">
+            <input class="form-control" name="reportDate" placeholder="Дата протокола" th:value="${#dates.format(report.getReportDate, 'dd.MM.yyyy')}">
         </div>
 
         <div class="mb-3">
             <label class="visually-hidden">Название протокола</label>
-            <input class="form-control" name="reportName" th:placeholder="${reportName}">
+            <input class="form-control" name="reportName" placeholder="Название протокола" th:value="${report.getReportName}">
         </div>
 
         <div class="mb-3">

@@ -2,10 +2,8 @@ package ru.shefer.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import ru.shefer.model.Report;
 import ru.shefer.model.ReportStorage;
 
-import java.util.Optional;
 
 @Controller
 public class DeleteController {

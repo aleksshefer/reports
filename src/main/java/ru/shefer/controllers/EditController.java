@@ -11,7 +11,6 @@ import ru.shefer.model.ReportStorage;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Optional;
-import java.util.UUID;
 
 @Controller
 public class EditController {
@@ -23,17 +22,11 @@ public class EditController {
 
     @GetMapping("/edit-form")
     public String editReportForm(int reportId, Model model) {
-        Optional<Report> reportOptional = reportStorage
+        reportStorage
                 .getReportStorageList()
                 .stream()
                 .filter(r -> r.getReportId() == reportId)
-                .findFirst();
-        if (reportOptional.isPresent()) {
-            model.addAttribute("reportId", reportId);
-            model.addAttribute("reportName", reportOptional.get().getReportName());
-            model.addAttribute("reportDate", reportOptional.get().getReportDate());
-            model.addAttribute("reportNumber", reportOptional.get().getReportNumber());
-        }
+                .findFirst().ifPresent(report -> model.addAttribute("report", report));
         return "edit-form";
     }
 
@@ -50,11 +43,9 @@ public class EditController {
                 .findFirst();
         if (reportOptional.isPresent()) {
             Report report = reportOptional.get();
-            reportStorage.getReportStorageList().remove(report);
             report.setReportNumber(reportNumber);
             report.setReportDate(dateFormat.parse(reportDate));
             report.setReportName(reportName);
-            reportStorage.getReportStorageList().add(report);
         }
         return "redirect:/";
 

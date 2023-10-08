@@ -13,9 +13,9 @@ public class ReportStorage {
 
     public ReportStorage() {
         this.reportStorageList = new ArrayList<>();
-        reportStorageList.add(new Report(1, Date.from(Instant.now()), "Протокол испытаний Т1"));
-        reportStorageList.add(new Report(2, Date.from(Instant.now()), "Протокол испытаний Т2"));
-        reportStorageList.add(new Report(3, Date.from(Instant.now()), "Протокол испытаний Т3"));
+        reportStorageList.add(new Report(1, 1, Date.from(Instant.now()), "Протокол испытаний Т1"));
+        reportStorageList.add(new Report(2, 2, Date.from(Instant.now()), "Протокол испытаний Т2"));
+        reportStorageList.add(new Report(3, 3, Date.from(Instant.now()), "Протокол испытаний Т3"));
     }
 
     public List<Report> getReportStorageList() {

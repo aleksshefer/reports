@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Протоколы об испытаниях</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+
+    <form class="row g-3" method="post" action="/create">
+
+        <div class="mb-3">
+            <label class="visually-hidden">Номер протокола</label>
+            <input class="form-control" name="reportNumber" placeholder="Номер протокола">
+        </div>
+
+        <div class="mb-3">
+            <label class="visually-hidden">Дата протокола</label>
+            <input class="form-control" name="reportDate" placeholder="Дата протокола">
+        </div>
+
+        <div class="mb-3">
+            <label class="visually-hidden">Название протокола</label>
+            <input class="form-control" name="reportName" placeholder="Название протокола">
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary mb-3">Сохранить протокол</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

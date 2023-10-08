@@ -3,6 +3,7 @@ package ru.shefer.model;
 import java.util.Date;
 
 public class Report {
+    private int reportId;
     private int reportNumber;
     private Date reportDate;
     private String reportName;
@@ -10,10 +11,19 @@ public class Report {
     public Report() {
     }
 
-    public Report(int reportNumber, Date reportDate, String reportName) {
+    public Report(int reportId, int reportNumber, Date reportDate, String reportName) {
+        this.reportId = reportId;
         this.reportNumber = reportNumber;
         this.reportDate = reportDate;
         this.reportName = reportName;
+    }
+
+    public int getReportId() {
+        return reportId;
+    }
+
+    public void setReportId(int reportId) {
+        this.reportId = reportId;
     }
 
     public int getReportNumber() {
